@@ -5,11 +5,16 @@ import json
 
 async def launch_web_ui(update: Update, callback: CallbackContext):
     # For now, let's just acknowledge that we received the command
+        
         kb = [
-        [KeyboardButton("Show me Google!", web_app=WebAppInfo("https://google.com"))],
-        [KeyboardButton("Show me Google2!", web_app=WebAppInfo("https://google.com"))]
+        [KeyboardButton(
+            "Show me my Web-App!", 
+           web_app=WebAppInfo("https://vadymboikov.github.io/new_saved_messages_bot/") 
+        )]
     ]
         await update.message.reply_text("Let's do this...", reply_markup=ReplyKeyboardMarkup(kb))
+    
+    
 
 
 if __name__ == '__main__':
